@@ -1,0 +1,143 @@
+Started by upstream project "CCRM-SIT-Build" build number 388
+originally caused by:
+ Started by an SCM change
+Running as Kallu, Revanth (Partner)
+Building in workspace C:\Users\310279420\.jenkins\workspace\CCRM-SIT-Deployment
+CCRM-SIT-Build #388
+C:\Users\310279420\.jenkins\jobs\CCRM-SIT-Build\builds\388\log
+Started by an SCM change
+Running as Kallu, Revanth (Partner)
+Building in workspace C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\codebase\src
+Updating https://svn-01.ta.philips.com/svn/m2osfdcrepo/b2bsalescloud/channelcrm/branches/November_Release_2018/M2OTest at revision '2018-10-26T15:11:23.845 +0530'
+A         objects\Asset.object
+U         objects\Opportunity.object
+A         objects\OpportunityLineItem.object
+A         profiles\M2O CS Backoffice.profile
+At revision 881
+
+No emails were triggered.
+[codebase] $ cmd.exe /C "ant.bat -file build.xml run && exit %%ERRORLEVEL%%"
+Buildfile: C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\codebase\build.xml
+
+start:
+     [echo]  M2O cCRM SFDC build process started...
+
+listMetadata:
+[sf:listMetadata] Using proxy: 42.99.164.34:10015
+[sf:listMetadata] Using proxy: 42.99.164.34:10015
+[sf:listMetadata] Using proxy: 42.99.164.34:10015
+[sf:listMetadata] Using proxy: 42.99.164.34:10015
+
+echotime:
+     [echo] the system date/time is 10/26/2018 3:01 PM
+
+createPackage:
+   [delete] Deleting directory C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\codebase\RetrievedComponents
+    [mkdir] Created dir: C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\codebase\RetrievedComponents
+    [mkdir] Created dir: C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\codebase\Files
+    [touch] Creating C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\codebase\package.xml
+     [copy] Copying 4 files to C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\codebase\Files
+     [copy] Copying 4 files to C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\codebase\RetrievedComponents
+     [echo] Skipping unmapped metadata type objects
+
+del_Files:
+   [delete] Deleting directory C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\codebase\Files
+
+end:
+     [move] Moving 1 file to C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\codebase\RetrievedComponents
+
+compile:
+
+run:
+
+BUILD SUCCESSFUL
+Total time: 7 seconds
+Email was triggered for: Always
+Sending email for trigger: Always
+Sending email to: partner.revanth.kallu@philips.com partner.pushkar.sindal@philips.com
+Triggering a new build of CCRM-SIT-Deployment
+Finished: SUCCESS
+
+No emails were triggered.
+[scripts] $ cmd.exe /C "ant.bat -file M2O_SFDC_Build.xml && exit %%ERRORLEVEL%%"
+Buildfile: C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\scripts\M2O_SFDC_Build.xml
+
+start:
+     [echo]  M2O cCRM SFDC build process started...
+
+runTestsDeployCode:
+[sf:deploy] Using proxy: 42.99.164.34:10015
+[sf:deploy] Using proxy: 42.99.164.34:10015
+[sf:deploy] Request for a deploy submitted successfully.
+[sf:deploy] Request ID for the current deploy task: 0Af1k000009ojueCAA
+[sf:deploy] Waiting for server to finish processing the request...
+[sf:deploy] Request Status: InProgress
+[sf:deploy] Request Status: InProgress
+[sf:deploy] -----------------------------------------------------------------------------------
+[sf:deploy] Component Failures:
+[sf:deploy] 1.  objects/Opportunity.object (Opportunity.Ambient_Experience) -- Error: Picklist value: ICIP Anesthesia - Comm add-on in picklist: Type_of_Opportunity__c not found (line 41207, column 18)
+[sf:deploy] -----------------------------------------------------------------------------------
+[sf:deploy] Request Status: InProgress
+[sf:deploy] -----------------------------------------------------------------------------------
+[sf:deploy] Component Failures:
+[sf:deploy] 2.  objects/Opportunity.object (Opportunity.IS_Ultrasound) -- Error: Picklist value: ICIP Anesthesia - Comm add-on in picklist: Type_of_Opportunity__c not found (line 61599, column 18)
+[sf:deploy] 3.  objects/Opportunity.object (Opportunity.PCCI_Standard) -- Error: Picklist value: ICIP Anesthesia - Comm add-on in picklist: Type_of_Opportunity__c not found (line 111605, column 18)
+[sf:deploy] 4.  objects/Opportunity.object (Opportunity.Government) -- Error: Picklist value: ICIP Anesthesia - Comm add-on in picklist: Type_of_Opportunity__c not found (line 57071, column 18)
+[sf:deploy] -----------------------------------------------------------------------------------
+[sf:deploy] Request Status: InProgress (1245/1246)  -- Processing Type: Profile
+[sf:deploy] -----------------------------------------------------------------------------------
+[sf:deploy] Component Failures:
+[sf:deploy] 5.  objects/Opportunity.object (Opportunity.eICU) -- Error: Picklist value: ICIP Anesthesia - Comm add-on in picklist: Type_of_Opportunity__c not found (line 175197, column 18)
+[sf:deploy] 6.  objects/Opportunity.object (Opportunity.ICCA_Opportunities) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_03 found (line 37213, column 19)
+[sf:deploy] 7.  objects/Opportunity.object (Opportunity.eICU_Add_On_Opportunities_Open_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40820, column 19)
+[sf:deploy] 8.  objects/Opportunity.object (Opportunity.eICU_Add_On_Opportunities_Open) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40778, column 19)
+[sf:deploy] 9.  objects/Opportunity.object (Opportunity.eICU_Add_On_Opportunities_Closed_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40728, column 19)
+[sf:deploy] 10.  objects/Opportunity.object (Opportunity.eICU_Add_On_Opportunities_Closed) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40686, column 19)
+[sf:deploy] 11.  objects/Opportunity.object (Opportunity.eICU_Add_On_Opportunities_All_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40649, column 19)
+[sf:deploy] 12.  objects/Opportunity.object (Opportunity.ICCA_Opportunities_Open) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_03 found (line 37272, column 19)
+[sf:deploy] 13.  objects/Opportunity.object (Opportunity.ICCA_Opportunities1) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_03 found (line 37240, column 19)
+[sf:deploy] 14.  objects/Opportunity.object (Opportunity.eICU_Support_Renewals_Open_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 41098, column 19)
+[sf:deploy] 15.  objects/Opportunity.object (Opportunity.eICU_Support_Renewals_Open) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Sales_Director found (line 41054, column 19)
+[sf:deploy] 16.  objects/Opportunity.object (Opportunity.eICU_Support_Renewals_All_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 41022, column 19)
+[sf:deploy] 17.  objects/Opportunity.object (Opportunity.eICU_Support_Renewals) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Sales_Director found (line 40978, column 19)
+[sf:deploy] 18.  objects/Opportunity.object (Opportunity.eICU_Opportunities) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40952, column 19)
+[sf:deploy] 19.  objects/Opportunity.object (Opportunity.eICU_New_Opportunities_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40901, column 19)
+[sf:deploy] 20.  objects/Opportunity.object (Opportunity.eICU_New_Opportunities) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40859, column 19)
+[sf:deploy] -----------------------------------------------------------------------------------
+[sf:deploy] Request Status: Failed
+
+BUILD FAILED
+C:\ITDelivery\CI\workspace\M2O\ccrm\sfdc\sit\scripts\M2O_SFDC_Build.xml:31: 
+*********** DEPLOYMENT FAILED ***********
+Request ID: 0Af1k000009ojueCAA
+
+All Component Failures:
+1.  objects/Opportunity.object (Opportunity.Ambient_Experience) -- Error: Picklist value: ICIP Anesthesia - Comm add-on in picklist: Type_of_Opportunity__c not found (line 41207, column 18)
+2.  objects/Opportunity.object (Opportunity.IS_Ultrasound) -- Error: Picklist value: ICIP Anesthesia - Comm add-on in picklist: Type_of_Opportunity__c not found (line 61599, column 18)
+3.  objects/Opportunity.object (Opportunity.PCCI_Standard) -- Error: Picklist value: ICIP Anesthesia - Comm add-on in picklist: Type_of_Opportunity__c not found (line 111605, column 18)
+4.  objects/Opportunity.object (Opportunity.Government) -- Error: Picklist value: ICIP Anesthesia - Comm add-on in picklist: Type_of_Opportunity__c not found (line 57071, column 18)
+5.  objects/Opportunity.object (Opportunity.eICU) -- Error: Picklist value: ICIP Anesthesia - Comm add-on in picklist: Type_of_Opportunity__c not found (line 175197, column 18)
+6.  objects/Opportunity.object (Opportunity.ICCA_Opportunities) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_03 found (line 37213, column 19)
+7.  objects/Opportunity.object (Opportunity.eICU_Add_On_Opportunities_Open_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40820, column 19)
+8.  objects/Opportunity.object (Opportunity.eICU_Add_On_Opportunities_Open) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40778, column 19)
+9.  objects/Opportunity.object (Opportunity.eICU_Add_On_Opportunities_Closed_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40728, column 19)
+10.  objects/Opportunity.object (Opportunity.eICU_Add_On_Opportunities_Closed) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40686, column 19)
+11.  objects/Opportunity.object (Opportunity.eICU_Add_On_Opportunities_All_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40649, column 19)
+12.  objects/Opportunity.object (Opportunity.ICCA_Opportunities_Open) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_03 found (line 37272, column 19)
+13.  objects/Opportunity.object (Opportunity.ICCA_Opportunities1) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_03 found (line 37240, column 19)
+14.  objects/Opportunity.object (Opportunity.eICU_Support_Renewals_Open_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 41098, column 19)
+15.  objects/Opportunity.object (Opportunity.eICU_Support_Renewals_Open) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Sales_Director found (line 41054, column 19)
+16.  objects/Opportunity.object (Opportunity.eICU_Support_Renewals_All_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 41022, column 19)
+17.  objects/Opportunity.object (Opportunity.eICU_Support_Renewals) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Sales_Director found (line 40978, column 19)
+18.  objects/Opportunity.object (Opportunity.eICU_Opportunities) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40952, column 19)
+19.  objects/Opportunity.object (Opportunity.eICU_New_Opportunities_upd) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40901, column 19)
+20.  objects/Opportunity.object (Opportunity.eICU_New_Opportunities) -- Error: In field: roleAndSubordinates - no Role named HC_NA_eICU_Bus_Dev_Mgr_01 found (line 40859, column 19)
+
+*********** DEPLOYMENT FAILED ***********
+
+
+Total time: 3 minutes 31 seconds
+Build step 'Invoke Ant' marked build as failure
+Email was triggered for: Always
+Sending email for trigger: Always
+Sending email to: partner.revanth.kallu@philips.com partner.prasanta.kumar.patchala@philips.com partner.muthu.balasubramaniam@philips.com partner.dipali.vijapure@philips.com partner.bijesh.kumar@philips.com partner.avaniraj.sharma@philips.com partner.ramandeep.kaur@philips.com partner.shilpa.vashishtha@philips.com partner.aanchal.sharma@philips.com partner.simona.fullinfaw@philips.com partner.anchal.keshab@philips.com amit.patil@philips.com partner.anuradha.nimbalkar@philips.com partner.neha.sonawane@philips.com partner.kirti.sareen@philips.com partner.avik.mukherjee@philips.com partner.pushkar.sindal@philips.com
